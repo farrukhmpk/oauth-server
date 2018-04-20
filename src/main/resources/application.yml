@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+---
+
+spring:
+  profiles: DEVELOPMENT
+security:
+  oauth2:
+    client:
+      client-id: dev
+      client-secret: devsecret
+---
+
+spring:
+  profiles: TEST
+security:
+  oauth2:
+    client:
+      client-id: test
+      client-secret: testsecret
+---
+
+spring:
+  profiles: PRODUCTION
+security:
+  oauth2:
+    client:
+      client-id: prod
+      client-secret: prodsecret
