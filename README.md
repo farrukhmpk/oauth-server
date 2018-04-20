@@ -100,11 +100,11 @@ NOTES
 	3. Install Docker using https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
 	4. Create a docker hub account for redistribution at https://hub.docker.com
 		a.	Carefully select UserID as it will be used in the build process and redistribution
-		b.	Create a repository with the project build final name, as per maven	
+		b.	Create a repository with the project build final name, i.e., oauth-server	
 			i.	Make sure to make it private
 			ii.	If not, it will be exposed to the entire world
 		c.	Change the docker hub account from farrukhmpk to what was selected above
-			i. Pom.xml
+			i. pom.xml
 			ii. dockerRun.sh (This can also be used on development and target Linux machine)
 			iii. dockerPush.sh
 			iv. dockerPull.sh (Only needed in target Linux machine)
