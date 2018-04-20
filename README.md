@@ -31,8 +31,10 @@ Build
 The service can be built and executed on any operating system
 
 This service is built to use embedded Apache Tomcat server <code>mvn clean package</code>.
+
 This service can be executed using <code>java -jar target\oauth-server.jar</code>  
-<code>build.bat</code> and <code>run.bat</code> can also be used respectively. 
+
+<code>build.sh</code> and <code>run.sh</code> can also be used respectively. 
 
 The log files are created under <code>/tmp/logs/</code> inside the container.
 
