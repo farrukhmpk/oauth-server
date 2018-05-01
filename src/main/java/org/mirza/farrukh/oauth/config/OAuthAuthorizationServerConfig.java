@@ -68,47 +68,41 @@ public class OAuthAuthorizationServerConfig extends AuthorizationServerConfigure
 
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints.authenticationManager(authenticationManager).userDetailsService(new UserDetailsService() {
+		endpoints.authenticationManager(authenticationManager).userDetailsService(username -> new UserDetails() {
 			
 			@Override
-			public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
-				return new UserDetails() {
-					
-					@Override
-					public boolean isEnabled() {
-						return true;
-					}
-					
-					@Override
-					public boolean isCredentialsNonExpired() {
-						return true;
-					}
-					
-					@Override
-					public boolean isAccountNonLocked() {
-						return true;
-					}
-					
-					@Override
-					public boolean isAccountNonExpired() {
-						return true;
-					}
-					
-					@Override
-					public String getUsername() {
-						return username;
-					}
-					
-					@Override
-					public String getPassword() {
-						return null;
-					}
-					
-					@Override
-					public Collection<? extends GrantedAuthority> getAuthorities() {
-						return new ArrayList<GrantedAuthority>();
-					}
-				};
+			public boolean isEnabled() {
+				return true;
+			}
+			
+			@Override
+			public boolean isCredentialsNonExpired() {
+				return true;
+			}
+			
+			@Override
+			public boolean isAccountNonLocked() {
+				return true;
+			}
+			
+			@Override
+			public boolean isAccountNonExpired() {
+				return true;
+			}
+			
+			@Override
+			public String getUsername() {
+				return username;
+			}
+			
+			@Override
+			public String getPassword() {
+				return null;
+			}
+			
+			@Override
+			public Collection<? extends GrantedAuthority> getAuthorities() {
+				return new ArrayList<GrantedAuthority>();
 			}
 		});
 	}
