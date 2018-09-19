@@ -14,6 +14,13 @@ Licenses
 **oauth-server** (this service) is provided under Apache License version 2.0.
 1. spring-boot and all associated libraries are provided under APACHE License v2
 	
+Docker
+======
+
+Docker image is available at [Docker Hub](https://hub.docker.com/r/farrukhmpk/oauth-server/) 
+
+<code>docker pull farrukhmpk/oauth-server</code>
+
 
 Build
 ======
